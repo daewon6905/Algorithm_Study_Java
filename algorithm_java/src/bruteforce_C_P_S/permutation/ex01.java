@@ -1,4 +1,4 @@
-package permutation;
+package bruteforce_C_P_S.permutation;
 
 import java.util.ArrayList;
 import java.util.List;

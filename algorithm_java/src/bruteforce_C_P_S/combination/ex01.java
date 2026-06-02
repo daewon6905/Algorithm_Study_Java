@@ -1,4 +1,4 @@
-package combination;
+package bruteforce_C_P_S.combination;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,4 @@
-package bruteforce_recursive;
-
-import java.util.ArrayList;
-import java.util.List;
+package bruteforce_C_P_S.bruteforce_recursive;
 
 public class ex02 {
     int[]nums = new int[]{4,9,7,5,1};

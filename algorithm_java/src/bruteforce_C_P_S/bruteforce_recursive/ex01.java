@@ -1,4 +1,4 @@
-package bruteforce_recursive;
+package bruteforce_C_P_S.bruteforce_recursive;
 
 import java.util.ArrayList;
 import java.util.List;

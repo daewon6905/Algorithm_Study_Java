@@ -1,4 +1,4 @@
-package subset;
+package bruteforce_C_P_S.subset;
 
 import java.util.ArrayList;
 import java.util.List;
