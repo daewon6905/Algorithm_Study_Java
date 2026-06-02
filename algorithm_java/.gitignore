@@ -3,8 +3,8 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .kotlin
-.idea
-algorithm_java.iml
+.idea/
+*.iml
 
 ### Eclipse ###
 .apt_generated
