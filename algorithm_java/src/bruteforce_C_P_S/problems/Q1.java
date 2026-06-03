@@ -1,4 +1,4 @@
-package bruteforce_C_P_S;
+package bruteforce_C_P_S.problems;
 //완전탐색 풀이
 public class Q1 {
     int answer;
