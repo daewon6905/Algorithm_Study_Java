@@ -11,6 +11,7 @@ public class bfs2 {
         int n = grid.length;
         int m = grid[0].length;
         boolean[][]visited= new boolean[n][m];
+        bfs(0, 0, visited, grid);
     }
 
     void bfs(int sr, int sc, boolean[][]visited, int[][]grid){
@@ -33,9 +34,9 @@ public class bfs2 {
                   다음 노드를 결정해야함.
                  */
                 if (nr >= 0 && nr < n && nc >= 0 && nc < m) {
-                    if(!visited[nr][nc]){
-                        if(grid[nr][nc] == 1){
-                            queue.offer(new int[]{nr,nc});
+                    if(grid[nr][nc] == 1){
+                        if(!visited[nr][nc]) {
+                            queue.offer(new int[]{nr, nc});
                             visited[nr][nc] = true;
                         }
                     }
