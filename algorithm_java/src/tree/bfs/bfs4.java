@@ -1,20 +1,10 @@
 package tree.bfs;
 
+import tree.Node2;
+
 import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Queue;
 
-//N-ary 트리 클래스 구현
-class Node2{
-    int value;
-    List<Node2>children;
-
-    public Node2(int value){
-        this.value = value;
-        this.children = new ArrayList<>();
-    }
-}
 public class bfs4 {
     void solution(Node2 root) {
         bfs(root);

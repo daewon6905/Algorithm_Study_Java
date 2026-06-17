@@ -1,18 +1,10 @@
 package tree.bfs;
 
+import tree.Node;
+
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-//이진 트리 클래스 구현
-class Node{
-    int value;
-    Node left;
-    Node right;
-
-    public Node(int value) {
-        this.value = value;
-    }
-}
 public class bfs3 {
     void solution(Node root) {
         bfs(root);
