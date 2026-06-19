@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+// 자식 -> 부모로 이어지게 트리를 변경 후 bottom up으로 추적
 public class Q2 {
     public String solution(String[][]folders, String p, String q){
         Map<String, String> parentMap = new HashMap<>();
