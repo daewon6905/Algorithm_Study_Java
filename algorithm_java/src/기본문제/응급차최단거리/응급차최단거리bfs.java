@@ -6,8 +6,8 @@ import java.util.Queue;
 public class 응급차최단거리bfs {
     int n;
     int m;
-    int[] dr = new int[]{0, 1,  0, -1, 1,  1, -1, -1};
-    int[] dc = new int[]{1, 0, -1,  0, 1, -1,  1, -1};
+    int[] dr = {-1, 1,  0, 0, 1,  1, -1, -1};
+    int[] dc = { 0, 0, -1, 1, 1, -1,  1, -1};
     public int solution(int[][] city) {
         int shortestDist = -1;
         n = city.length;
