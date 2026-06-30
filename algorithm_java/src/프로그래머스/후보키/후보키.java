@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
+//후보키 -> 유일성, 최소성 만족
 public class 후보키 {
     public int solution(String[][] relation) {
         int rowLen = relation.length;
