@@ -13,7 +13,7 @@ public class 캐시2 {
             String s = city.toLowerCase();
             if(cache.containsKey(s)){
                 time+=1;
-                cache.get(s);
+                cache.get(s); // 값에 접근만해도 뒤로 보내짐(LRU가 유지됨)
             }else{
                 if(cache.size() == cacheSize){
                     String lru = cache.entrySet().iterator().next().getKey();
