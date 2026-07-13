@@ -13,7 +13,7 @@ public class NetworkDelayTime {
             graph.get(time[0]).add(new int[]{time[1],time[2]});
         }
         Arrays.fill(dist,Integer.MAX_VALUE);
-        Queue<int[]> pq = new PriorityQueue<>((x, y)->x[1]-y[1]);
+        Queue<int[]> pq = new PriorityQueue<>((x, y)->Integer.compare(x[1],y[1])); // or (x,y) -> x[1]-y[1]
         pq.offer(new int[]{k,0});
         dist[k] = 0;
 
