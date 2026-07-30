@@ -1,4 +1,4 @@
-package 프로그래머스.서버증설횟수;
+package 프로그래머스코드챌린지.서버증설횟수;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
