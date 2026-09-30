@@ -27,7 +27,6 @@ public class 등대2 {
                 turnOn = true;
             }
         }
-        //켜야함
         if(turnOn){
             answer++;
             return true;
