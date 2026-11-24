@@ -12,54 +12,45 @@ public class 토마토 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        List<int[]> riped = new ArrayList<>();
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
-        graph = new int[n][m];
-        for (int i = 0; i < n; i++) {
-            String line = br.readLine();
-            for (int j = 0; j < m; j++) {
-                if(line.charAt(j) - '0' == 1){
-                    riped.add(new int[]{i,j});
+        graph = new int[m][n];
+        Queue<int[]> queue = new ArrayDeque<>();
+        for (int i = 0; i < m; i++) {
+            st = new StringTokenizer(br.readLine());
+            for (int j = 0; j < n; j++) {
+                int cur = Integer.parseInt(st.nextToken());
+                if(cur == 1){
+                    queue.offer(new int[]{i,j});
                 }
-                graph[i][j] = line.charAt(j) - '0';
+                graph[i][j] = cur;
             }
         }
-        Queue<int[]> queue = new ArrayDeque<>();
-        for (int[] start : riped) {
-            queue.offer(new int[]{start[0],start[1],0});
-        }
-        int minTime = 0;
         while (!queue.isEmpty()) {
             int[] cur = queue.poll();
             int r = cur[0];
             int c = cur[1];
-            int t = cur[2];
-            minTime = t;
             for (int i = 0; i < 4; i++) {
                 int nr = r + dr[i];
                 int nc = c + dc[i];
-                if (nr >= 0 && nr < n && nc >= 0 && nc < m) {
+                if (nr >= 0 && nr < m && nc >= 0 && nc < n) {
                     if (graph[nr][nc] == 0) {
-                        queue.offer(new int[]{nr, nc, t + 1});
-                        graph[nr][nc] = 1;
+                        graph[nr][nc] = graph[r][c] + 1;
+                        queue.offer(new int[]{nr, nc});
                     }
                 }
             }
         }
-        if(!check(n,m)){
-            System.out.println(-1);
-        }else {
-            System.out.println(minTime);
-        }
-    }
-
-    static boolean check(int n, int m) {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                if (graph[i][j] == 0) return false;
+        int days = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (graph[i][j] == 0){
+                    System.out.println(-1);
+                    return;
+                }
+                days = Math.max(days, graph[i][j]);
             }
         }
-        return true;
+        System.out.println(days-1);
     }
 }
